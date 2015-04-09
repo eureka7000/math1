@@ -1,14 +1,190 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Math1</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+  	<title> Math1 </title>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	
+  	<%= stylesheet_link_tag 'reset', 'application', media: 'all', 
+  		'data-turbolinks-track' => true %> 
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<!--
+  	<link rel="stylesheet" type="text/css" href="default.css">
+-->		
+  
+    <%= csrf_meta_tags %>
+ 
+    <!--
+		<script>
+			$(document).ready(function(){
+				$(this).click(function(){
+						$('nav.navbar').slideToggle('slow');
+				});
+			});
+		</script>
+		-->
+		<script>
+			$(document).ready(function(){
+				$('button.navbar-toggle').click(function(){
+					$('div.nav-collapse-1 .main-menu.user').css({'display':'none'});
+					// $('ul.dropdown-list-1').css({'display':'none'});
+					$('div.nav-collapse-1').slideToggle('slow');
+				});
 
-<%= yield %>
+				$('div.nav-collapse .dropdown.main-menu').click(function(){
+					$('div.study-list ul.dropdown-list').slideToggle('slow');
+				});
 
-</body>
+				$('div.nav-collapse-1 .dropdown.main-menu').click(function(){
+					// $('div.nav-collapse-1').css({'position':'absolute', 'top':'0px', 'left':'0px'});
+					$('ul.dropdown-list-1').css({'display':'block', 'left':'100%'});
+					$('div.nav-collapse-1').css({'position':'relative', 'left':'-22.5%'});
+					$('div.nav-collapse-1 li.dropdown span').css({'display':'inline'});
+					$('div.nav-collapse-1 li.dropdown button').css({'display':'inline'});
+					$('div.nav-collapse-1').animate({'width':'55%'}, 'fast', function(){
+						// var wind = $(window).width();
+						// var docu = $(document).width();
+						// var thi1 = $(this).width();
+						// console.log(wind);
+						// console.log(docu);
+						// console.log(thi1);
+						$('ul.dropdown-list-1').animate({'left':'57%'}, 'slow');
+					});
+				});
+
+				$('div.nav-collapse-1 li.dropdown button.delete').click(function(){
+					$('ul.dropdown-list-1').animate({'left':'100%'}, 'slow', function(){
+						$('ul.dropdown-list-1').css({'display':'none'});
+						$('div.nav-collapse-1 li.dropdown span.delete').css({'display':'none'});
+						$('div.nav-collapse-1 li.dropdown button.delete').css({'display':'none'});
+						// $('div.nav-collapse-1').css({'width':'100%'});
+						$('div.nav-collapse-1').animate({'width':'99.5%'}, 'slow'); 
+						$('div.nav-collapse-1').css({'left':'0%'});
+					});
+					// $('div.nav-collapse-1').css({'width':'300%'});
+					// $('div.nav-collapse-1').css({'position':'relative', 'left':'22.5%'});
+					// $('div.nav-collapse-1').animate({'width':'100%'}, 'slow');
+					// $('div.nav-collapse-1 li.dropdown span.delete').css({'display':'none'});
+					// $('div.nav-collapse-1 li.dropdown button.delete').css({'display':'none'});
+				});
+			});
+
+		</script>
+
+	</head>
+
+	<body>
+
+	<div id="wrap">
+		<header class="header">
+			<nav class="nav">
+				<button type="button" class="navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+       		<span class="icon-bar"></span>
+         	<span class="icon-bar"></span>
+        </button>
+				<a class="brand" href="#"><b><i>Eureka Math</i></b></a>
+			</nav>
+			<div class="nav-collapse">
+				<ul>
+					<li class="active main-menu"><a href="#">Project 개요 </a></li>
+					<li class="dropdown main-menu"><a data-toggle="dropdown" class="dropdown-toggle" href="#">Study <b class="caret"></b></a>
+					</li>
+					<li class="main-menu"><a href="#">Community </a></li>
+					<li class="main-menu user">''<a href="#"></a></li>
+					<li class="main-menu last"><a href="#">login </a></li>
+				</ul>
+			</div>
+		</header>
+			<div class="nav-collapse-1">
+				<ul>
+					<!-- <li class="divider"></li> -->
+					<li class="active main-menu"><a href="#">Project 개요 </a></li>
+					<li class="divider"></li>
+					<li class="dropdown main-menu"><a data-toggle="dropdown" class="dropdown-toggle" href="#">Study <b class="caret"></b></a><span class="delete">&nbsp&nbsp&nbsp&nbsp</span><button type="button" class="delete">delete</button>
+					</li>
+					<li class="divider"></li>
+					<li class="main-menu"><a href="#">Community </a></li>
+					<li class="divider"></li>
+					<li class="main-menu user">''<a href="#"></a></li>
+					<li class="main-menu last"><a href="#">login </a></li>
+					<!-- <li class="divider"></li> -->
+				</ul>
+			</div>
+			<div class="study-list">
+				<ul class="dropdown-list">
+					<li><a href="#">&nbsp&nbsp000 총류 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp100 집합과 명제 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp200 수와 식 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp300 방정식과 부둥식 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp400 함수 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp500 도형 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp600 지수,로그,삼각함수 <b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp700 미분과 적분 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp800 행렬과 벡터 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp900 확률과 통계 &nbsp&nbsp<b class="caret"></b></a></li>
+				</ul>
+			</div>
+			<div class="study-list-1">
+				<ul class="dropdown-list-1">
+					<li>&nbsp&nbsp<a href="#">000 총류 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp100 집합과 명제 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp200 수와 식 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp300 방정식과 부둥식 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp400 함수 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp500 도형 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp600 지수,로그,삼각함수 <b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp700 미분과 적분 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp800 행렬과 벡터 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li class="divider"></li>
+					<li><a href="#">&nbsp&nbsp900 확률과 통계 &nbsp&nbsp<b class="caret"></b></a></li>
+				</ul>
+			</div>
+		<section class="project">
+		<main class="bs-docs-masthead" id="content" role="main" tabindex="-1">
+  
+			<div class="container">
+				<span class="bs-docs-booticon bs-docs-booticon-lg bs-docs-booticon-outline">E</span>
+				<h1>Eureka Math!</h1><br>
+				<p>수학이 점점 더 쉽고 재미(fun) 있어져, 학생 스스로(self) 수학을 통해 자기의 꿈(dream)을 실현해 가는 청소년 희망 프로젝트</p>
+			</div>
+		</main>
+		</section>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+
+	<%= yield %>
+
+		<br>
+	</div>
+	<br>
+	<hr />
+	<footer class="footer">
+			<p>copyright&copy; 2015 Eureka Math Lab all rights reserved.</p>
+	</footer>
+
+	</body>
 </html>
+

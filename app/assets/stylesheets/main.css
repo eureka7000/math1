@@ -1,0 +1,356 @@
+@charset "utf-8";
+
+
+/* 모바일용 CSS */
+/* 기본 CSS */
+
+/*@media all and (max-width:767px) {*/
+
+#wrap {
+	/*display: flex;
+	flex-flow: row wrap;*/
+	width: 99.5%; 
+	margin: 0 auto;
+}
+
+.header {
+	/*display: flex;
+	flex-flow: row nowrap;*/
+	/*position: relative;*/
+	width: 100%;
+	margin: 0 auto;
+	height: 40px;
+	background-color: white;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/*.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}*/
+
+.brand {
+	float: left;
+	width: 25%;
+	/*padding: 9px 10px;*/
+	padding-left: 5px;
+	margin-top: 8px;
+  margin-right: 0px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.nav-collapse {
+	display: none;
+}
+
+.nav-collapse-1 {
+	display: none;
+	clear: both;
+	width: 99.5%;
+	padding: 5px auto;
+	margin: 0px auto;
+  /*margin-bottom: 8px;*/
+  background-color: white;
+  background-image: none;
+  /*border: 1px solid blue;*/
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+div.nav-collapse-1 li.main-menu {
+	width: 90%;
+	padding: 0px auto;
+	margin: 8px auto;
+  /*margin-bottom: 8px;*/
+  background-color: transparent;
+  background-image: none;
+  /*border: 1px solid blue;*/
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-align: center;
+}
+
+div.nav-collapse-1 li.divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+div.nav-collapse-1 li.dropdown span {
+	display: none;
+}
+
+div.nav-collapse-1 li.dropdown button {
+	display: none;
+  background-color: yellow;
+}
+
+div.nav-collapse-1 li.dropdown button:hover {
+  cursor: pointer;
+}
+
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  /*padding: 9px 10px;*/
+  padding: 7px 8px;
+  /*margin-top: 8px;*/
+  margin-top: 6px;
+  margin-right: 0px;
+  /*margin-bottom: 8px;*/
+  margin-bottom: 6px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+button.navbar-toggle:hover {
+  cursor: pointer;
+}
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: black;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+
+div.study-list ul.dropdown-list {
+	display: none;
+}
+
+
+div.study-list-1 ul.dropdown-list-1 {
+	/*display: none;*/
+	clear: both;
+	position: fixed;
+	/*position: relative;*/
+	left: 100%;
+	top: 33px;
+	width: 41%;
+	z-index: 5;
+	text-align: left;
+	/*color: white;*/
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 8px;
+  margin-right: 0px;
+  margin-bottom: 8px;
+  background-color: white;
+  background-image: none;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+li.divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+ul.dropdown-list {
+	clear: both;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.bs-docs-masthead {
+	margin-top: 1px;
+  position: relative;
+  padding: 30px 0;
+  color: #cdbfe3;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  background-color: #6f5499;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#563d7c),to(#6f5499));
+  background-image: -webkit-linear-gradient(top,#563d7c 0,#6f5499 100%);
+  background-image: -o-linear-gradient(top,#563d7c 0,#6f5499 100%);
+  background-image: linear-gradient(to bottom,#563d7c 0,#6f5499 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
+  background-repeat: repeat-x;
+}
+
+.bs-docs-masthead .bs-docs-booticon {
+  margin: 0 auto 30px;
+}
+.bs-docs-booticon-outline {
+  background-color: transparent;
+  border: 1px solid #cdbfe3;
+}
+.bs-docs-booticon-lg {
+  width: 144px;
+  height: 144px;
+  font-size: 108px;
+  line-height: 140px;
+}
+.bs-docs-booticon {
+  display: block;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  cursor: default;
+  background-color: #563d7c;
+  border-radius: 15%;
+}
+
+/*
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #fff;
+}*/
+
+
+/* 푸터 영역 CSS */
+.footer{
+/*order:10;*/
+width:99.9%; 
+margin: 0 auto;
+max-width: 1000px;
+background:#474747;
+}
+
+.footer p{
+padding:20px;
+padding:1.250rem;
+font-size:0.813em;
+font-size:0.813rem;
+text-align:center;
+text-transform:uppercase;
+font-weight:bold;
+color:#fff;
+text-shadow:0px 1px 1px #191919;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 태블릿 및 PC용 CSS */
+@media all and (min-width:768px) {
+
+/*body {
+	max-width: 1000px;
+}*/
+#wrap {
+	max-width: 1000px;
+}
+
+.header {
+	/*width: 100%;*/
+	height: 50px;
+	padding-top: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	background-color: white;
+}
+
+.brand {
+	width: 19%;
+}
+
+.navbar-toggle {
+	display: none;
+}
+
+.nav-collapse {
+	display: inline;
+	float: right;
+	width: 80%;
+	/*background-color: yellow;*/
+	background-color: transparent;
+}
+
+div.nav-collapse-1 li.main-menu {
+	display: none;
+}
+
+div.study-list-1 ul.dropdown-list-1 {
+	display: none;
+}
+
+.main-menu {
+	/*display: inline;*/
+	float: left;
+	width: 19%;
+	text-align: center;
+	padding-left: 5px;
+	margin-top: 8px;
+  margin-right: 0px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.main-menu.user {
+	visibility: hidden;
+}
+.main-menu.last {
+	float: right;
+}
+
+div.study-list ul.dropdown-list {
+	display: none;
+	position: relative;
+	left: 38%;
+	width: 22%;
+	position: relative;
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 8px;
+  margin-right: 0px;
+  margin-bottom: 8px;
+  background-color: white;
+  background-image: none;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+}
