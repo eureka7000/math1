@@ -1,0 +1,109 @@
+<%= form_for(@actual_question) do |f| %>
+  <% if @actual_question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@actual_question.errors.count, "error") %> prohibited this actual_question from being saved:</h2>
+
+      <ul>
+      <% @actual_question.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :aq_number %><br>
+    <%= f.text_field :aq_number %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_question %><br>
+    <%= f.text_field :aq_question %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_level %><br>
+    <%= f.text_field :aq_level %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_level_name %><br>
+    <%= f.text_field :aq_level_name %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_level_de1 %><br>
+    <%= f.text_field :aq_level_de1 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_level_de2 %><br>
+    <%= f.text_field :aq_level_de2 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_explanation_1_1 %><br>
+    <%= f.text_field :aq_explanation_1_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_explanation_1_2 %><br>
+    <%= f.text_field :aq_explanation_1_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_explanation_1_3 %><br>
+    <%= f.text_field :aq_explanation_1_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_explanation_1_4 %><br>
+    <%= f.text_field :aq_explanation_1_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_explanation_1_5 %><br>
+    <%= f.text_field :aq_explanation_1_5 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_explanation_2_1 %><br>
+    <%= f.text_field :aq_explanation_2_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_explanation_2_2 %><br>
+    <%= f.text_field :aq_explanation_2_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_explanation_2_3 %><br>
+    <%= f.text_field :aq_explanation_2_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_explanation_2_4 %><br>
+    <%= f.text_field :aq_explanation_2_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_explanation_2_5 %><br>
+    <%= f.text_field :aq_explanation_2_5 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_explanation_3_1 %><br>
+    <%= f.text_field :aq_explanation_3_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_explanation_3_2 %><br>
+    <%= f.text_field :aq_explanation_3_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_explanation_3_3 %><br>
+    <%= f.text_field :aq_explanation_3_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_explanation_3_4 %><br>
+    <%= f.text_field :aq_explanation_3_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_explanation_3_5 %><br>
+    <%= f.text_field :aq_explanation_3_5 %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_source_type %><br>
+    <%= f.text_field :aq_source_type %>
+  </div>
+  <div class="field">
+    <%= f.label :aq_source_at %><br>
+    <%= f.text_field :aq_source_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

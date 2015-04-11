@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cp_number: MyString
+  cp_question: MyString
+  cp_answer: MyString
+  cp_explanation: MyString
+
+two:
+  cp_number: MyString
+  cp_question: MyString
+  cp_answer: MyString
+  cp_explanation: MyString

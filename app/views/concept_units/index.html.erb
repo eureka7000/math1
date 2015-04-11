@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Concept Units</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cu number</th>
+      <th>Cu title</th>
+      <th>Cu description</th>
+      <th>Cu level</th>
+      <th>Cu concept</th>
+      <th>Cu explanation 1</th>
+      <th>Cu explanation 2</th>
+      <th>Cu reference 1</th>
+      <th>Cu reference 2</th>
+      <th>Exercise blpr 1</th>
+      <th>Exercise blan 1</th>
+      <th>Exercise blpr 2</th>
+      <th>Exercise blan 2</th>
+      <th>Exercise blpr 3</th>
+      <th>Exercise blan 3</th>
+      <th>Exercise rwpr 1</th>
+      <th>Exercise rwan 1</th>
+      <th>Exercise rwpr 2</th>
+      <th>Exercise rwan 2</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @concept_units.each do |concept_unit| %>
+      <tr>
+        <td><%= concept_unit.cu_number %></td>
+        <td><%= concept_unit.cu_title %></td>
+        <td><%= concept_unit.cu_description %></td>
+        <td><%= concept_unit.cu_level %></td>
+        <td><%= concept_unit.cu_concept %></td>
+        <td><%= concept_unit.cu_explanation_1 %></td>
+        <td><%= concept_unit.cu_explanation_2 %></td>
+        <td><%= concept_unit.cu_reference_1 %></td>
+        <td><%= concept_unit.cu_reference_2 %></td>
+        <td><%= concept_unit.exercise_blpr_1 %></td>
+        <td><%= concept_unit.exercise_blan_1 %></td>
+        <td><%= concept_unit.exercise_blpr_2 %></td>
+        <td><%= concept_unit.exercise_blan_2 %></td>
+        <td><%= concept_unit.exercise_blpr_3 %></td>
+        <td><%= concept_unit.exercise_blan_3 %></td>
+        <td><%= concept_unit.exercise_rwpr_1 %></td>
+        <td><%= concept_unit.exercise_rwan_1 %></td>
+        <td><%= concept_unit.exercise_rwpr_2 %></td>
+        <td><%= concept_unit.exercise_rwan_2 %></td>
+        <td><%= link_to 'Show', concept_unit %></td>
+        <td><%= link_to 'Edit', edit_concept_unit_path(concept_unit) %></td>
+        <td><%= link_to 'Destroy', concept_unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Concept unit', new_concept_unit_path %>

@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aq_number: MyString
+  aq_question: MyString
+  aq_level: MyString
+  aq_level_name: MyString
+  aq_level_de1: MyString
+  aq_level_de2: MyString
+  aq_explanation_1_1: MyString
+  aq_explanation_1_2: MyString
+  aq_explanation_1_3: MyString
+  aq_explanation_1_4: MyString
+  aq_explanation_1_5: MyString
+  aq_explanation_2_1: MyString
+  aq_explanation_2_2: MyString
+  aq_explanation_2_3: MyString
+  aq_explanation_2_4: MyString
+  aq_explanation_2_5: MyString
+  aq_explanation_3_1: MyString
+  aq_explanation_3_2: MyString
+  aq_explanation_3_3: MyString
+  aq_explanation_3_4: MyString
+  aq_explanation_3_5: MyString
+  aq_source_type: MyString
+  aq_source_at: MyString
+
+two:
+  aq_number: MyString
+  aq_question: MyString
+  aq_level: MyString
+  aq_level_name: MyString
+  aq_level_de1: MyString
+  aq_level_de2: MyString
+  aq_explanation_1_1: MyString
+  aq_explanation_1_2: MyString
+  aq_explanation_1_3: MyString
+  aq_explanation_1_4: MyString
+  aq_explanation_1_5: MyString
+  aq_explanation_2_1: MyString
+  aq_explanation_2_2: MyString
+  aq_explanation_2_3: MyString
+  aq_explanation_2_4: MyString
+  aq_explanation_2_5: MyString
+  aq_explanation_3_1: MyString
+  aq_explanation_3_2: MyString
+  aq_explanation_3_3: MyString
+  aq_explanation_3_4: MyString
+  aq_explanation_3_5: MyString
+  aq_source_type: MyString
+  aq_source_at: MyString

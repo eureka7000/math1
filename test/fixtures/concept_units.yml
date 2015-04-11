@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cu_number: MyString
+  cu_title: MyString
+  cu_description: MyText
+  cu_level: MyString
+  cu_concept: MyString
+  cu_explanation_1: MyString
+  cu_explanation_2: MyString
+  cu_reference_1: MyString
+  cu_reference_2: MyString
+  exercise_blpr_1: MyString
+  exercise_blan_1: MyString
+  exercise_blpr_2: MyString
+  exercise_blan_2: MyString
+  exercise_blpr_3: MyString
+  exercise_blan_3: MyString
+  exercise_rwpr_1: MyString
+  exercise_rwan_1: MyString
+  exercise_rwpr_2: MyString
+  exercise_rwan_2: MyString
+
+two:
+  cu_number: MyString
+  cu_title: MyString
+  cu_description: MyText
+  cu_level: MyString
+  cu_concept: MyString
+  cu_explanation_1: MyString
+  cu_explanation_2: MyString
+  cu_reference_1: MyString
+  cu_reference_2: MyString
+  exercise_blpr_1: MyString
+  exercise_blan_1: MyString
+  exercise_blpr_2: MyString
+  exercise_blan_2: MyString
+  exercise_blpr_3: MyString
+  exercise_blan_3: MyString
+  exercise_rwpr_1: MyString
+  exercise_rwan_1: MyString
+  exercise_rwpr_2: MyString
+  exercise_rwan_2: MyString

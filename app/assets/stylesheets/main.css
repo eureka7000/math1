@@ -9,7 +9,7 @@
 #wrap {
 	/*display: flex;
 	flex-flow: row wrap;*/
-	width: 99.5%; 
+	width: 99.9%; 
 	margin: 0 auto;
 }
 
@@ -17,7 +17,7 @@
 	/*display: flex;
 	flex-flow: row nowrap;*/
 	/*position: relative;*/
-	width: 100%;
+	width: 99.9%;
 	margin: 0 auto;
 	height: 40px;
 	background-color: white;
@@ -65,11 +65,11 @@
 .nav-collapse-1 {
 	display: none;
 	clear: both;
-	width: 99.5%;
+	width: 99%;
 	padding: 5px auto;
 	margin: 0px auto;
   /*margin-bottom: 8px;*/
-  background-color: white;
+  background-color: transparent;
   background-image: none;
   /*border: 1px solid blue;*/
   border: 1px solid gray;
@@ -195,7 +195,7 @@ ul.dropdown-list {
   margin-left: auto;
 }
 .bs-docs-masthead {
-	margin-top: 1px;
+	margin-top: 3px;
   position: relative;
   padding: 30px 0;
   color: #cdbfe3;
@@ -244,7 +244,7 @@ ul.dropdown-list {
 /*order:10;*/
 width:99.9%; 
 margin: 0 auto;
-max-width: 1000px;
+max-width: 1200px;
 background:#474747;
 }
 
@@ -277,20 +277,22 @@ text-shadow:0px 1px 1px #191919;
 	max-width: 1000px;
 }*/
 #wrap {
-	max-width: 1000px;
+	max-width: 1200px;
 }
 
 .header {
-	/*width: 100%;*/
+	width: 99.9%;
+  max-width: 1200px;
 	height: 50px;
 	padding-top: 10px;
-	padding-left: 30px;
-	padding-right: 30px;
-	background-color: white;
+	/*padding-left: 30px;*/
+	/*padding-right: 30px;*/
+	background-color: transparent;
 }
 
 .brand {
-	width: 19%;
+  padding-left: 30px;
+	width: 15%;
 }
 
 .navbar-toggle {
@@ -300,7 +302,7 @@ text-shadow:0px 1px 1px #191919;
 .nav-collapse {
 	display: inline;
 	float: right;
-	width: 80%;
+	width: 77%;
 	/*background-color: yellow;*/
 	background-color: transparent;
 }
@@ -316,7 +318,7 @@ div.study-list-1 ul.dropdown-list-1 {
 .main-menu {
 	/*display: inline;*/
 	float: left;
-	width: 19%;
+	width: 18%;
 	text-align: center;
 	padding-left: 5px;
 	margin-top: 8px;
@@ -347,7 +349,7 @@ div.study-list ul.dropdown-list {
 	margin-top: 8px;
   margin-right: 0px;
   margin-bottom: 8px;
-  background-color: white;
+  background-color: transparent;
   background-image: none;
   border: 1px solid gray;
   border-radius: 4px;

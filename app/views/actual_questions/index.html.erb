@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Actual Questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aq number</th>
+      <th>Aq question</th>
+      <th>Aq level</th>
+      <th>Aq level name</th>
+      <th>Aq level de1</th>
+      <th>Aq level de2</th>
+      <th>Aq explanation 1 1</th>
+      <th>Aq explanation 1 2</th>
+      <th>Aq explanation 1 3</th>
+      <th>Aq explanation 1 4</th>
+      <th>Aq explanation 1 5</th>
+      <th>Aq explanation 2 1</th>
+      <th>Aq explanation 2 2</th>
+      <th>Aq explanation 2 3</th>
+      <th>Aq explanation 2 4</th>
+      <th>Aq explanation 2 5</th>
+      <th>Aq explanation 3 1</th>
+      <th>Aq explanation 3 2</th>
+      <th>Aq explanation 3 3</th>
+      <th>Aq explanation 3 4</th>
+      <th>Aq explanation 3 5</th>
+      <th>Aq source type</th>
+      <th>Aq source at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @actual_questions.each do |actual_question| %>
+      <tr>
+        <td><%= actual_question.aq_number %></td>
+        <td><%= actual_question.aq_question %></td>
+        <td><%= actual_question.aq_level %></td>
+        <td><%= actual_question.aq_level_name %></td>
+        <td><%= actual_question.aq_level_de1 %></td>
+        <td><%= actual_question.aq_level_de2 %></td>
+        <td><%= actual_question.aq_explanation_1_1 %></td>
+        <td><%= actual_question.aq_explanation_1_2 %></td>
+        <td><%= actual_question.aq_explanation_1_3 %></td>
+        <td><%= actual_question.aq_explanation_1_4 %></td>
+        <td><%= actual_question.aq_explanation_1_5 %></td>
+        <td><%= actual_question.aq_explanation_2_1 %></td>
+        <td><%= actual_question.aq_explanation_2_2 %></td>
+        <td><%= actual_question.aq_explanation_2_3 %></td>
+        <td><%= actual_question.aq_explanation_2_4 %></td>
+        <td><%= actual_question.aq_explanation_2_5 %></td>
+        <td><%= actual_question.aq_explanation_3_1 %></td>
+        <td><%= actual_question.aq_explanation_3_2 %></td>
+        <td><%= actual_question.aq_explanation_3_3 %></td>
+        <td><%= actual_question.aq_explanation_3_4 %></td>
+        <td><%= actual_question.aq_explanation_3_5 %></td>
+        <td><%= actual_question.aq_source_type %></td>
+        <td><%= actual_question.aq_source_at %></td>
+        <td><%= link_to 'Show', actual_question %></td>
+        <td><%= link_to 'Edit', edit_actual_question_path(actual_question) %></td>
+        <td><%= link_to 'Destroy', actual_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Actual question', new_actual_question_path %>

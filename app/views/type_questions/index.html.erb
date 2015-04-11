@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Type Questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tq number</th>
+      <th>Tq question</th>
+      <th>Tq level</th>
+      <th>Tq answer</th>
+      <th>Tq explanation 1</th>
+      <th>Tq explanation 2</th>
+      <th>Tq related concept 1</th>
+      <th>Tq related concept 2</th>
+      <th>Tq related concept 3</th>
+      <th>Tq related concept 4</th>
+      <th>Tq type number</th>
+      <th>Tq type title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @type_questions.each do |type_question| %>
+      <tr>
+        <td><%= type_question.tq_number %></td>
+        <td><%= type_question.tq_question %></td>
+        <td><%= type_question.tq_level %></td>
+        <td><%= type_question.tq_answer %></td>
+        <td><%= type_question.tq_explanation_1 %></td>
+        <td><%= type_question.tq_explanation_2 %></td>
+        <td><%= type_question.tq_related_concept_1 %></td>
+        <td><%= type_question.tq_related_concept_2 %></td>
+        <td><%= type_question.tq_related_concept_3 %></td>
+        <td><%= type_question.tq_related_concept_4 %></td>
+        <td><%= type_question.tq_type_number %></td>
+        <td><%= type_question.tq_type_title %></td>
+        <td><%= link_to 'Show', type_question %></td>
+        <td><%= link_to 'Edit', edit_type_question_path(type_question) %></td>
+        <td><%= link_to 'Destroy', type_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Type question', new_type_question_path %>

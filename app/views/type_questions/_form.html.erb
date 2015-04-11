@@ -1,0 +1,65 @@
+<%= form_for(@type_question) do |f| %>
+  <% if @type_question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@type_question.errors.count, "error") %> prohibited this type_question from being saved:</h2>
+
+      <ul>
+      <% @type_question.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tq_number %><br>
+    <%= f.text_field :tq_number %>
+  </div>
+  <div class="field">
+    <%= f.label :tq_question %><br>
+    <%= f.text_field :tq_question %>
+  </div>
+  <div class="field">
+    <%= f.label :tq_level %><br>
+    <%= f.text_field :tq_level %>
+  </div>
+  <div class="field">
+    <%= f.label :tq_answer %><br>
+    <%= f.text_field :tq_answer %>
+  </div>
+  <div class="field">
+    <%= f.label :tq_explanation_1 %><br>
+    <%= f.text_field :tq_explanation_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :tq_explanation_2 %><br>
+    <%= f.text_field :tq_explanation_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :tq_related_concept_1 %><br>
+    <%= f.text_field :tq_related_concept_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :tq_related_concept_2 %><br>
+    <%= f.text_field :tq_related_concept_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :tq_related_concept_3 %><br>
+    <%= f.text_field :tq_related_concept_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :tq_related_concept_4 %><br>
+    <%= f.text_field :tq_related_concept_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :tq_type_number %><br>
+    <%= f.text_field :tq_type_number %>
+  </div>
+  <div class="field">
+    <%= f.label :tq_type_title %><br>
+    <%= f.text_field :tq_type_title %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

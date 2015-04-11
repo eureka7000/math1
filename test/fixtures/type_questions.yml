@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tq_number: MyString
+  tq_question: MyString
+  tq_level: MyString
+  tq_answer: MyString
+  tq_explanation_1: MyString
+  tq_explanation_2: MyString
+  tq_related_concept_1: MyString
+  tq_related_concept_2: MyString
+  tq_related_concept_3: MyString
+  tq_related_concept_4: MyString
+  tq_type_number: MyString
+  tq_type_title: MyString
+
+two:
+  tq_number: MyString
+  tq_question: MyString
+  tq_level: MyString
+  tq_answer: MyString
+  tq_explanation_1: MyString
+  tq_explanation_2: MyString
+  tq_related_concept_1: MyString
+  tq_related_concept_2: MyString
+  tq_related_concept_3: MyString
+  tq_related_concept_4: MyString
+  tq_type_number: MyString
+  tq_type_title: MyString

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Concept Practices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cp number</th>
+      <th>Cp question</th>
+      <th>Cp answer</th>
+      <th>Cp explanation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @concept_practices.each do |concept_practice| %>
+      <tr>
+        <td><%= concept_practice.cp_number %></td>
+        <td><%= concept_practice.cp_question %></td>
+        <td><%= concept_practice.cp_answer %></td>
+        <td><%= concept_practice.cp_explanation %></td>
+        <td><%= link_to 'Show', concept_practice %></td>
+        <td><%= link_to 'Edit', edit_concept_practice_path(concept_practice) %></td>
+        <td><%= link_to 'Destroy', concept_practice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Concept practice', new_concept_practice_path %>

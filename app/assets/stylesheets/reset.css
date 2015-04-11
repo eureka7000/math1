@@ -13,7 +13,7 @@ background:transparent;
 
 body{
 font-family:NanumGothic,나눔고딕,'Nanum Gothic','맑은 고딕',HelveticaNeue,DroidSans,Sans-serif,Helvetica;
-background:url(s_images/body_bg.png);
+/*background:url(s_images/body_bg.png);*/
 max-width: 1200px;
 line-height:1;
 }

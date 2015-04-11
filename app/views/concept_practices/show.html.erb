@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cp number:</strong>
+  <%= @concept_practice.cp_number %>
+</p>
+
+<p>
+  <strong>Cp question:</strong>
+  <%= @concept_practice.cp_question %>
+</p>
+
+<p>
+  <strong>Cp answer:</strong>
+  <%= @concept_practice.cp_answer %>
+</p>
+
+<p>
+  <strong>Cp explanation:</strong>
+  <%= @concept_practice.cp_explanation %>
+</p>
+
+<%= link_to 'Edit', edit_concept_practice_path(@concept_practice) %> |
+<%= link_to 'Back', concept_practices_path %>

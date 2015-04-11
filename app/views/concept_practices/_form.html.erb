@@ -1,0 +1,33 @@
+<%= form_for(@concept_practice) do |f| %>
+  <% if @concept_practice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@concept_practice.errors.count, "error") %> prohibited this concept_practice from being saved:</h2>
+
+      <ul>
+      <% @concept_practice.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cp_number %><br>
+    <%= f.text_field :cp_number %>
+  </div>
+  <div class="field">
+    <%= f.label :cp_question %><br>
+    <%= f.text_field :cp_question %>
+  </div>
+  <div class="field">
+    <%= f.label :cp_answer %><br>
+    <%= f.text_field :cp_answer %>
+  </div>
+  <div class="field">
+    <%= f.label :cp_explanation %><br>
+    <%= f.text_field :cp_explanation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
