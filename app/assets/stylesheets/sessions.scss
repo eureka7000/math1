@@ -1,0 +1,25 @@
+// Place all the styles related to the registrations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.signin {
+  /*float: left;*/
+  position: absolute;
+  left: 35%;
+  width: 30%;
+  /*padding: 9px 10px;*/
+  padding: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  margin-top: 8px;
+  margin-right: 0px;
+  margin-bottom: 30px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.signin p {
+	color: red;
+}

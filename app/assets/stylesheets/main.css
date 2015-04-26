@@ -20,7 +20,63 @@
 	width: 99.9%;
 	margin: 0 auto;
 	height: 40px;
-	background-color: white;
+	background-color:;
+}
+
+div.brand {
+  width: 30%;
+}
+
+.brand {
+  float: left;
+  width: 99%;
+  /*left: 30%*/
+  /*padding: 20px 10px;*/
+  padding-left: 10px;
+  margin-top: 5px;
+  margin-right: 0px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+div.nav-collapse {
+  display: inline;
+  display: none;
+  float: left;
+  width: 50%;
+  padding-left: 15px;
+  margin-top: 9px;
+  margin-right: 0px;
+  margin-bottom: 7px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+div.nav-collapse li {
+  display: inline;
+  width: 20%;
+}
+
+.large-menu {
+  /*width: 100px;*/
+  /*padding:5px;
+  margin:1px;
+  font-weight:bold;
+  background-color: #0ff;*/
+}
+
+.large-menu-item {
+  display:none;
+}
+
+.large-menu-item li {
+  text-align: center;
+  background-color: transparent;
 }
 
 .sr-only {
@@ -44,23 +100,6 @@
   clip: auto;
 }*/
 
-.brand {
-	float: left;
-	width: 25%;
-	/*padding: 9px 10px;*/
-	padding-left: 5px;
-	margin-top: 8px;
-  margin-right: 0px;
-  margin-bottom: 8px;
-  background-color: transparent;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
-
-.nav-collapse {
-	display: none;
-}
 
 .nav-collapse-1 {
 	display: none;
@@ -127,10 +166,10 @@ div.nav-collapse-1 li.dropdown button:hover {
   /*padding: 9px 10px;*/
   padding: 7px 8px;
   /*margin-top: 8px;*/
-  margin-top: 6px;
+  margin-top: 5px;
   margin-right: 0px;
   /*margin-bottom: 8px;*/
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -188,6 +227,8 @@ ul.dropdown-list {
 	clear: both;
 }
 
+
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -232,6 +273,8 @@ ul.dropdown-list {
   background-color: #563d7c;
   border-radius: 15%;
 }
+
+
 
 /*
 .navbar-inverse .navbar-toggle .icon-bar {
@@ -287,25 +330,49 @@ text-shadow:0px 1px 1px #191919;
 	padding-top: 10px;
 	/*padding-left: 30px;*/
 	/*padding-right: 30px;*/
-	background-color: transparent;
+	/*background-color: transparent;*/
+}
+div.brand {
+  width: 25%;
 }
 
 .brand {
   padding-left: 30px;
-	width: 15%;
+  width: 99%;
 }
 
 .navbar-toggle {
-	display: none;
+  display: none;
 }
 
-.nav-collapse {
-	display: inline;
-	float: right;
-	width: 77%;
-	/*background-color: yellow;*/
-	background-color: transparent;
+div.nav-collapse {
+  width: 69%;
+  display: inline;
+  float: left;
+  padding-left: 0px;
+  margin-top: 9px;
+  margin-right: 0px;
+  margin-bottom: 1px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
 }
+
+div.nav-collapse li {
+  display: inline;
+  float: left;
+  width: 23%;
+}
+
+li.main-menu.last {
+  text-align: center;
+}
+
+/*li.main-menu-study-projest {
+  display: none;
+}*/
+
 
 div.nav-collapse-1 li.main-menu {
 	display: none;
@@ -315,31 +382,15 @@ div.study-list-1 ul.dropdown-list-1 {
 	display: none;
 }
 
-.main-menu {
-	/*display: inline;*/
-	float: left;
-	width: 18%;
-	text-align: center;
-	padding-left: 5px;
-	margin-top: 8px;
-  margin-right: 0px;
-  margin-bottom: 8px;
-  background-color: transparent;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
+
+
+div.nav-collapse i {
+  color: blue;
 }
 
-.main-menu.user {
-	visibility: hidden;
-}
-.main-menu.last {
-	float: right;
-}
 
 div.study-list ul.dropdown-list {
 	display: none;
-	position: relative;
 	left: 38%;
 	width: 22%;
 	position: relative;
@@ -353,6 +404,4 @@ div.study-list ul.dropdown-list {
   background-image: none;
   border: 1px solid gray;
   border-radius: 4px;
-}
-
 }

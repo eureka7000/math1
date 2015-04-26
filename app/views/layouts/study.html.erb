@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title> Math1 </title>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	
+  	<%= stylesheet_link_tag 'reset', 'application', media: 'all', 
+  		'data-turbolinks-track' => true %> 
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<!--
+  	<link rel="stylesheet" type="text/css" href="default.css">
+-->		
+  
+    <%= csrf_meta_tags %>
+ 
+	 	<script>
+	 		// $(document).ready(function(){
+	 		// 	console.log('hello study set');
+	 		// 	var $win = $(window);
+	 		// 	var wind = $(window).height()*0.8;
+				// var bod = $('body').height();
+				// console.log(wind);
+				// console.log(bod);
+				// $('div.set-list').css({'height':wind});
+				// $('div.set-list').css({'visibility':'visible'})
+				// $('div.set-list ul.dropdown-set-list').css({'visibility':'visible'})
+	 		// });
+		</script>
+
+	</head>
+
+	<body>
+
+	<div id="wrap">
+		<header class="header">
+			<div class="brand">
+				<a class="brand" href="#"><b><i>Eureka Math</i></b></a>
+			</div>
+			<div class="nav-collapse">
+				<ul>
+					<li class="main-menu-study-project"><a href="#">Project 개요 </a></li>
+					<li class="main-menu-study-category"><a data-toggle="dropdown" class="dropdown-toggle" href="#"><%= @category_name %></a>
+					</li>
+					<li class="main-menu-study-cummunity"><a href="#">Community </a></li>
+					<li class="main-menu last"><a href="#"><i><%= @user.username %></i></a></li>
+				</ul>
+			</div>
+			<div class="button">
+				<button type="button" class="navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+       		<span class="icon-bar"></span>
+         	<span class="icon-bar"></span>
+       	</button>
+       </div>
+		</header>
+		<li class="divider"></li>
+		<script>
+			// $('div.button').css({'display':'none'});
+			console.log('study');
+			var wind = $(window).width();
+			console.log(wind)
+			if (wind < 768 ) {
+				$('div.button').css({'display':'none'});
+				$('div.nav-collapse').css({'display':'inline', 'padding-left':'14%'});
+				$('li.main-menu-study-project').css({'display':'none'});
+				$('li.main-menu-study-cummunity').css({'display':'none'});
+				$('li.main-menu-study-category').css({'text-align':'left'})
+				$('li.main-menu.last').css({'float':'right', 'text-align':'left'});
+				$('li.main-menu.last i').css({'color':'blue'});
+			}
+			$('li.main-menu-study-project').css({'visibility':'hidden'});
+			$('li.main-menu-study-cummunity').css({'visibility':'hidden'});
+			// $('li.main-menu-study-category').click(function(){
+			// 		console.log('study-category-click');
+			// 	});
+		</script>
+		<!-- <hr /> -->
+			
+			<div class="set-list">
+				<ul class="dropdown-set-list">
+					<li><a href="#">101 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">102 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">103 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">104 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">105 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">106 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">107 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">108 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">109 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">110 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">111 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">112 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">113 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">114 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">115 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">116 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">117 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">118 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">119 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">120 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">121 집합과 원소</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Type 01</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Type 02</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Type 03</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Type 04</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Drill  1</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Drill  2</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Drill  3</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Drill  4</a></li>
+				</ul>
+			</div>
+			<script>
+			// $('div.set-list').css({'visibility':'hidden'})
+			var txt = ""
+				$('ul.dropdown-set-list li a').each(function(){
+					txt = $(this).text();
+					$(this).html("&nbsp&nbsp&nbsp&nbsp" + txt + "&nbsp&nbsp&nbsp" ); 
+					// console.log(this)
+				console.log('hello study set');
+	 			var $win = $(window);
+	 			var wind = $(window).height()*0.75;
+				var bod = $('body').height();
+				console.log(wind);
+				console.log(bod);
+				$('div.set-list').css({'height':wind});
+				$('div.set-list').css({'visibility':'visible'})
+				$('div.set-list ul.dropdown-set-list').css({'visibility':'visible'})
+				});
+				// $('div.set-list').css({'visibility':'hidden'});
+				// $('div.set-list').css({'visibility':'visible'});
+			</script>
+		<!-- <section class="project">
+		<main class="bs-docs-masthead" id="content" role="main" tabindex="-1">
+  
+			<div class="container">
+				<span class="bs-docs-booticon bs-docs-booticon-lg bs-docs-booticon-outline">E</span>
+				<h1>Eureka Math!</h1><br>
+				<p>수학이 점점 더 쉽고 재미(fun) 있어져, 학생 스스로(self) 수학을 통해 자기의 꿈(dream)을 실현해 가는 청소년 희망 프로젝트</p>
+			</div>
+		</main>
+		</section> -->
+		
+		
+	
+		
+	  <%= yield %> 
+
+		<br>
+		<br>
+		<% if notice %>
+			<p class="notice"><%= notice %></p>
+		<% end %>
+		<% if alert %>
+    	<p class="alert"><%= alert %></p>
+    <% end %>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+	</div>
+	<br>
+	<hr />
+	<footer class="footer">
+			<p>copyright&copy; 2015 Eureka Math Lab all rights reserved.</p>
+	</footer>
+
+	</body>
+</html>
+

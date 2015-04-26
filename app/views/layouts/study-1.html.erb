@@ -60,29 +60,45 @@
 
 	<div id="wrap">
 		<header class="header">
-			<div class="brand">
+			<nav class="nav">
 				<a class="brand" href="#"><b><i>Eureka Math</i></b></a>
-			</div>
-			<div class="nav-collapse">
-				<ul>
-					<li class="active main-menu"><a href="#">Project 개요 </a></li>
-					<li class="dropdown main-menu"><a data-toggle="dropdown" class="dropdown-toggle" href="#">&nbspStudy &nbsp&nbsp<b class="caret"></b></a>
-					</li>
-					<li class="main-menu"><a href="#">Community </a></li>
-					<li class="main-menu last"><a href="#">login </a></li>
-				</ul>
-			</div>
-			<div class="button">
 				<button type="button" class="navbar-toggle">
 					<span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
        		<span class="icon-bar"></span>
          	<span class="icon-bar"></span>
-       	</button>
-       </div>
+        </button>
+			</nav>
+			<div class="nav-collapse">
+				<ul class="nav-collapse-main">
+					<li class="active main-menu"><a href="#">Project 개요 </a></li>
+					<li class="dropdown main-menu"><a data-toggle="dropdown" class="dropdown-toggle" href="#">&nbspStudy &nbsp&nbsp<b class="caret"></b></a>
+					</li>
+					<li class="main-menu"><a href="#">Community </a></li>
+				</ul>
+				<ul class="nav-collapse-user">
+					<li class="main-menu user"><a href="#"><i><%= current_user.username %></i></a></li>
+					<li class="main-menu last"><a href="#">logout </a></li>
+				</ul>
+			</div>
 		</header>
-		<li class="divider"></li>
-		<!-- <hr /> -->
+
+			<!-- <nav class="nav">
+				<a class="brand" href="#"><b><i>Eureka Math</i></b></a>
+				<span class="category"><a href="#"><%= @category_name %>&nbsp&nbsp&nbsp<b class="caret"></b></a></span>
+				<span class="user"><a href="#"><i><%= current_user.username %></i></a></span>
+				<button type="button" class="navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+       		<span class="icon-bar"></span>
+         	<span class="icon-bar"></span>
+        </button>
+			</nav> -->
+
+			<span class="category"><a href="#"><%= @category_name %>&nbsp&nbsp&nbsp
+			 <b class="caret"></b></a></span>
+			<span class="user"><a href="#"><i><%= current_user.username %></i></a></span>
+
 			<div class="nav-collapse-1">
 				<ul>
 					<!-- <li class="divider"></li> -->
@@ -100,80 +116,50 @@
 			</div>
 			<div class="study-list">
 				<ul class="dropdown-list">
-					<li class="large-menu"><a href="/study/home?0">&nbsp&nbsp000 총류 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li><a href="/study/home?0">&nbsp&nbsp000 총류 &nbsp&nbsp<b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="#">&nbsp&nbsp100 집합과 명제 &nbsp&nbsp<b class="caret"></b></a></li>
-						<div class="large-menu-item">
-							<ul>
-								<li class="divider"></li>
-								<li><a href="/study/home?1">집  합</a></li>
-								<li class="divider"></li>
-								<li><a href="/study/home?2">명  제</a></li>
-							</ul>
-						</div>
+				  <!-- <li><%= link_to("100 집합과 명제", home_path, { confirm: "Are You sure?"}) %> -->
+						<a href="/study/home?1">&nbsp&nbsp100 집합과 명제 &nbsp&nbsp<b class="caret"></b></a>
+					</li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="#">&nbsp&nbsp200 수와 식 &nbsp&nbsp<b class="caret"></b></a></li>
-						<div class="large-menu-item">
-							<ul>
-								<li class="divider"></li>
-								<li><a href="/study/home?3">수</a></li>
-								<li class="divider"></li>
-								<li><a href="/study/home?4">식</a></li>
-							</ul>
-						</div>
+					<li><a href="/study/home?2">&nbsp&nbsp200 수와 식 &nbsp&nbsp<b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="/study/home?3">&nbsp&nbsp300 방정식과 부둥식 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li><a href="/study/home?3">&nbsp&nbsp300 방정식과 부둥식 &nbsp&nbsp<b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="/study/home?4">&nbsp&nbsp400 함수 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li><a href="/study/home?4">&nbsp&nbsp400 함수 &nbsp&nbsp<b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="/study/home?5">&nbsp&nbsp500 도형 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li><a href="/study/home?5">&nbsp&nbsp500 도형 &nbsp&nbsp<b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="/study/home?6">&nbsp&nbsp600 지수,로그,삼각함수 <b class="caret"></b></a></li>
+					<li><a href="/study/home?6">&nbsp&nbsp600 지수,로그,삼각함수 <b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="/study/home?7">&nbsp&nbsp700 미분과 적분 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li><a href="/study/home?7">&nbsp&nbsp700 미분과 적분 &nbsp&nbsp<b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="/study/home?8">&nbsp&nbsp800 행렬과 벡터 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li><a href="/study/home?8">&nbsp&nbsp800 행렬과 벡터 &nbsp&nbsp<b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="/study/home?9">&nbsp&nbsp900 확률과 통계 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li><a href="/study/home?9">&nbsp&nbsp900 확률과 통계 &nbsp&nbsp<b class="caret"></b></a></li>
 				</ul>
 			</div>
 			<div class="study-list-1">
 				<ul class="dropdown-list-1">
-					<li class="large-menu">&nbsp&nbsp<a href="/study/home?0">000 총류 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li>&nbsp&nbsp<a href="/study/home?0">000 총류 &nbsp&nbsp<b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="#">&nbsp&nbsp100 집합과 명제 &nbsp&nbsp<b class="caret"></b></a></li>
-						<div class="large-menu-item">
-							<ul>
-								<li class="divider"></li>
-								<li><a href="/study/home?1">집  합</a></li>
-								<li class="divider"></li>
-								<li><a href="/study/home?2">명  제</a></li>
-							</ul>
-						</div>
+					<li><a href="/study/home?1">&nbsp&nbsp100 집합과 명제 &nbsp&nbsp<b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="#">&nbsp&nbsp200 수와 식 &nbsp&nbsp<b class="caret"></b></a></li>
-					<div class="large-menu-item">
-							<ul>
-								<li class="divider"></li>
-								<li><a href="/study/home?3">수</a></li>
-								<li class="divider"></li>
-								<li><a href="/study/home?4">식</a></li>
-							</ul>
-						</div>
+					<li><a href="/study/home?2">&nbsp&nbsp200 수와 식 &nbsp&nbsp<b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="/study/home?3">&nbsp&nbsp300 방정식과 부둥식 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li><a href="/study/home?3">&nbsp&nbsp300 방정식과 부둥식 &nbsp&nbsp<b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="/study/home?4">&nbsp&nbsp400 함수 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li><a href="/study/home?4">&nbsp&nbsp400 함수 &nbsp&nbsp<b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="/study/home?5">&nbsp&nbsp500 도형 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li><a href="/study/home?5">&nbsp&nbsp500 도형 &nbsp&nbsp<b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="/study/home?6">&nbsp&nbsp600 지수,로그,삼각함수 <b class="caret"></b></a></li>
+					<li><a href="/study/home?6">&nbsp&nbsp600 지수,로그,삼각함수 <b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="/study/home?7">&nbsp&nbsp700 미분과 적분 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li><a href="/study/home?7">&nbsp&nbsp700 미분과 적분 &nbsp&nbsp<b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="/study/home?8">&nbsp&nbsp800 행렬과 벡터 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li><a href="/study/home?8">&nbsp&nbsp800 행렬과 벡터 &nbsp&nbsp<b class="caret"></b></a></li>
 					<li class="divider"></li>
-					<li class="large-menu"><a href="/study/home?9">&nbsp&nbsp900 확률과 통계 &nbsp&nbsp<b class="caret"></b></a></li>
+					<li><a href="/study/home?9">&nbsp&nbsp900 확률과 통계 &nbsp&nbsp<b class="caret"></b></a></li>
 				</ul>
 			</div>
 		<!-- <section class="project">

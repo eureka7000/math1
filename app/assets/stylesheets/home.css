@@ -1,0 +1,20 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@charset "utf-8";
+
+.signin {
+	float: left;
+	width: 40%;
+	/*padding: 9px 10px;*/
+	padding: 5px auto;
+	/*padding-left: 5px;*/
+	margin-top: 8px;
+  margin-right: 0px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid blue;
+  border-radius: 4px;
+}
