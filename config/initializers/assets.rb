@@ -11,5 +11,4 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 # Rails.application.config.assets.precompile += %w( reset.css bootstrap.css 
 # 	bootstrap.js application_start.js)
-Rails.application.config.assets.precompile += %w( reset.css bootstrap.css 
-	bootstrap.js)
+Rails.application.config.assets.precompile += %w( reset.css set.js )

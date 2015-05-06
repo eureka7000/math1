@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'set/home'
+
+  get 'set/set101'
+
+  get 'set/set102'
+
+  get 'set/set103'
+
+  get 'set/set104'
+
   get 'registrations/update'
 
   # devise_for :users

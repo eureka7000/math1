@@ -1,15 +1,4 @@
-	<section class="project">
-		<main class="bs-docs-masthead" id="content" role="main" tabindex="-1">
-  
-			<div class="container">
-				<span class="bs-docs-booticon bs-docs-booticon-lg bs-docs-booticon-outline">M</span>
-				<h1>Eureka Math!</h1><br>
-				<p>수학이 점점 더 쉽고 재미(fun) 있어져, 학생 스스로(self) 수학을 통해 자기의 꿈(dream)을 실현해 가는 청소년 희망 프로젝트</p>
-			</div>
-		</main>
-	</section>
-	<script>
-	$(document).ready(function(){
+$(document).ready(function(){
 				$('button.navbar-toggle').click(function(){
 					$('div.nav-collapse-1 .main-menu.user').css({'display':'none'});
 					$('div.nav-collapse-1').slideToggle('slow');
@@ -57,5 +46,4 @@
     			// $(this).siblings().css({backgroundImage:""});
 				});
 
-	});
-	</script>
+});

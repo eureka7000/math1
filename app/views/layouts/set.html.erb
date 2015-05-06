@@ -1,37 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
   	<title> Math1 </title>
   	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	
+  	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  	<!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+
   	<%= stylesheet_link_tag 'reset', 'application', media: 'all', 
   		'data-turbolinks-track' => true %> 
-  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  	<%= javascript_include_tag 'application' %>
+ 
 <!--
   	<link rel="stylesheet" type="text/css" href="default.css">
 -->		
   
     <%= csrf_meta_tags %>
- 
+ 		
 	 	<script>
-	 		// $(document).ready(function(){
-	 		// 	console.log('hello study set');
-	 		// 	var $win = $(window);
-	 		// 	var wind = $(window).height()*0.8;
-				// var bod = $('body').height();
-				// console.log(wind);
-				// console.log(bod);
-				// $('div.set-list').css({'height':wind});
-				// $('div.set-list').css({'visibility':'visible'})
-				// $('div.set-list ul.dropdown-set-list').css({'visibility':'visible'})
-	 		// });
+	 		$(function() {
+	 			console.log('ready dialog');
+	 			// var $po = $('div.level3');
+	 			var pos = $('div.level3').position();
+	 			var offs = $('div.level3').offset();
+	 			console.log(pos);
+	 			console.log(offs);
+	 			// $('div.level3').css({'display':'none'});
+	 			// $('img.level3').css({'display':'none'});
+	 			var l3w = $('div.level3').width();
+	 			var l3h = $('div.level3').height();
+	 			console.log(l3w);
+	 			console.log(l3h);
+	 			$('img.empty').clone().prependTo('div.level3');
+	 			$('img.empty').css({'width':l3w, 'height':l3h});
+	 			// $('img.empty').offset({ top: offstop, left:offsleft});
+	 			var pt = $('img.empty').offset();
+	 			var ip = $('img.empty').position();
+	 			// vat pth = $('img.empty').height();
+	 			console.log(pt);
+	 			console.log(ip);
+
+	 			var lev2array = $('img.lev2').get();
+	 			$.each(lev2array, function(){
+	 				
+	 			});
+
+	 			// console.log(pth);
+
+
+	 			// $('div.empty').css({'width': 435, 'height':l3height,
+	 			// 										'background-color':'yellow'}):
+
+    		$( "#dialog" ).dialog({
+    			width: 470, height: 300, autoOpen: false,
+      		show: { effect: "blind", duration: 1000 },
+      		hide: { effect: "explode", duration: 1000 }
+    		});
+    		$( "#dialogcha" ).dialog({
+    			width: 480, height: 300, autoOpen: false,
+      		show: { effect: "blind", duration: 1000 },
+      		hide: { effect: "explode", duration: 1000 }
+    		});
+ 
+    		$( "#opener" ).click(function() { $( "#dialog" ).dialog( "open" ); });
+    		$( "#cha" ).click(function() { $( "#dialogcha" ).dialog( "open" ); });
+
+  		});
+			// $(function() {
+			// 	console.log('test');
+			// 	alert('test');
+			// 	$( "#dialog" ).dialog({
+	 	// 			show: {effect: "blind", duration: 2000}
+	 	// 		});
+  	// 	});
+			// jQuery(document).ready(function($){
+			// 		console.log('test');
+			// 		alert('test');
+			// });
+	 		
 		</script>
 
-		
 	</head>
 
 	<body>
+
 
 	<div id="wrap">
 		<header class="header">
@@ -59,7 +113,7 @@
 		<li class="divider"></li>
 		<script>
 			// $('div.button').css({'display':'none'});
-			console.log('study1');
+			console.log('study2');
 			var wind = $(window).width();
 			console.log(wind)
 			if (wind < 768 ) {
@@ -68,18 +122,15 @@
 				$('li.main-menu-study-project').css({'display':'none'});
 				$('li.main-menu-study-cummunity').css({'display':'none'});
 				$('li.main-menu-study-category').css({'text-align':'left'})
-				$('li.main-menu.last').css({'float':'right', 'text-align':'left'});
+				$('li.main-menu.last').css({'float':'right', 'text-align':'left', 'padding-right':'10%'});
 				$('li.main-menu.last i').css({'color':'blue'});
 			}
 			$('li.main-menu-study-project').css({'visibility':'hidden'});
 			$('li.main-menu-study-cummunity').css({'visibility':'hidden'});
-			$('li.main-menu-study-category').click(function(){
-					console.log('toggle1');
-	 				$('div.set-list').slideToggle('slow');
-	 			});
 			// $('li.main-menu-study-category').click(function(){
 			// 		console.log('study-category-click');
 			// 	});
+			
 		</script>
 		<!-- <hr /> -->
 			
@@ -145,14 +196,14 @@
 				</ul>
 			</div>
 			<script>
-			// $('div.set-list').css({'visibility':'hidden'})
+			$('div.set-list').css({'display':'none'})
 			var txt = ""
 				$('ul.dropdown-set-list li a').each(function(){
 					txt = $(this).text();
 					$(this).html("&nbsp&nbsp&nbsp&nbsp" + txt + "&nbsp&nbsp&nbsp" );
 				});
 					// console.log(this)
-				console.log('hello study set1');
+				console.log('hello study set2');
 	 			var $win = $(window);
 	 			var wind = $(window).height()*0.75;
 				var bod = $('body').height();
@@ -163,6 +214,10 @@
 				$('div.set-list ul.dropdown-set-list').css({'visibility':'visible'});
 				// $('div.set-list').css({'visibility':'hidden'});
 				// $('div.set-list').css({'visibility':'visible'});
+				$('li.main-menu-study-category').click(function(){
+					console.log('toggle');
+	 				$('div.set-list').slideToggle('slow');
+	 			});
 			</script>
 		<!-- <section class="project">
 		<main class="bs-docs-masthead" id="content" role="main" tabindex="-1">
@@ -176,10 +231,49 @@
 		</section> -->
 		
 		
-	
+		
 		
 	  <%= yield %> 
 
+		<script type="text/javascript">
+
+			var wind = $(window).width();
+			if (wind > 768) {
+				var con = 437*2;
+				var percent = (1-con/wind)/2*wind;
+
+				console.log("center margin");
+				console.log(wind);
+				console.log(con);
+				console.log(percent);
+				$('div.cimage').css({'margin-left':percent});
+				// $('div.cimage img.epimage:even').css({'float':'right'})
+			};
+			cwind = 437;
+			console.log(cwind);
+			// if (cwind > wind) {
+			// 	console.log("hel");
+			// 	var percent = wind-10;
+			// 	$('img.c120c, img.c120ep').css({'width':percent});
+			// 	$('div.epimage').css({'width':percent});
+			// };
+			$('#mape11').click(function(){$('img.c120e11a').slideToggle('fast');});
+			$('#mape12').click(function(){$('img.c120e12a').slideToggle('fast');});
+			$('#mape13').click(function(){$('img.c120e13a').slideToggle('fast');});
+			$('#mape14').click(function(){$('img.c120e14a').slideToggle('fast');});
+			$('#mape15').click(function(){$('img.c120e15a').slideToggle('fast');});
+			$('#mape21').click(function(){$('img.c120e21a').slideToggle('fast');});
+			$('#mape22').click(function(){$('img.c120e22a').slideToggle('fast');});
+			$('#mape23').click(function(){$('img.c120e23a').slideToggle('fast');});
+			$('#mapp1').click(function(){$('img.c120p1a').slideToggle('fast');});
+			$('#mapp2').click(function(){$('img.c120p2a').slideToggle('fast');});
+			$('#mapp3').click(function(){$('img.c120p3a').slideToggle('fast');});
+			$('#mapp41').click(function(){$('img.c120p41a').slideToggle('fast');});
+			$('#mapp42').click(function(){$('img.c120p42a').slideToggle('fast');});
+			$('#mapp43').click(function(){$('img.c120p43a').slideToggle('fast');});
+			$('#mapp44').click(function(){$('img.c120p44a').slideToggle('fast');});
+			
+		</script>
 		<br>
 		<br>
 		<% if notice %>
@@ -192,12 +286,22 @@
 		<br>
 		<br>
 		<br>
+		<!-- <div id="dialog" title="Basic dialog">
+  		<p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+		</div>
+ 
+		<button id="opener">Open Dialog</button> -->
 		<br>
 		<br>
 		<br>
 		<br>
 		<br>
 		<br>
+		<div class="empty">
+		 <%= image_tag("", class: "emptylev1") %>
+		 <%= image_tag("", class: "emptylev2") %>
+		 <%= image_tag("", class: "emptylev3") %>
+		</div>
 		
 	</div>
 	<br>
@@ -205,7 +309,7 @@
 	<footer class="footer">
 			<p>copyright&copy; 2015 Eureka Math Lab all rights reserved.</p>
 	</footer>
-
+	
 	</body>
 </html>
 

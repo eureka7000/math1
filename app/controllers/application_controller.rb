@@ -9,6 +9,13 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+  CATEGORY_NAME = ["000 총류", "집  합", "명  제", "수", "식",
+   "400 함수", "500 도형", "600 지수,로그,삼각함수", "700 행렬과 벡터", "800 미분과 적분",
+    "900 확률과 통계" ]
+
+  
+
+
   protected
 
   #   def configure_permitted_parameters
